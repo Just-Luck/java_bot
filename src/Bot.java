@@ -7,6 +7,7 @@ public class Bot {
         currentGame = new Game(this);
     }
 
+    //asdasdasdasdasdasdasdasdddddddddddddddddddddddddddddddddddddddddddddd
     public String start(String request) {
         if (currentGame == null) {
             currentGame = new Game(this);
