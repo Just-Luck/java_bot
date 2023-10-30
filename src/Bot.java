@@ -3,11 +3,19 @@ public class Bot {
     private boolean inGame;
     private Game currentGame;
 
+    /**
+     * Конструктор бота. Инициализирует объект бота и связывает его с игрой.
+     */
     public Bot() {
         currentGame = new Game(this);
     }
 
-    //asdasdasdasdasdasdasdasdddddddddddddddddddddddddddddddddddddddddddddd
+    /**
+     * Метод для обработки пользовательских запросов и управления игровым процессом.
+     *
+     * @param request Запрос, который отправлен пользователем.
+     * @return Ответ бота на запрос пользователя.
+     */
     public String start(String request) {
         if (currentGame == null) {
             currentGame = new Game(this);
@@ -41,11 +49,20 @@ public class Bot {
                 }
         }
     }
-
+    /**
+     * Проверяет, разрешено ли боту продолжать выполнение.
+     *
+     * @return true, если бот может продолжать работу, в противном случае - false.
+     */
     public boolean isStartAndStop() {
         return startAndStop;
     }
 
+    /**
+     * Устанавливает состояние игры (в процессе игры или нет).
+     *
+     * @param inGame true, если игра находится в процессе, в противном случае - false.
+     */
     public void setInGame(boolean inGame) {
         this.inGame = inGame;
     }
